@@ -1,24 +1,41 @@
 # dotfiles
 
-My dotfiles
+My dotfiles + Brewfiles
 
 # Usage
 
-- Cleanup Dock
-defaults write com.apple.dock "persistent-apps" -array;
-killall Dock;
+The makefile is supposed to be run after a fresh install of MacOS.
 
-- install homebrew 
-- add homebrew to zprofile 
-- Run these two commands in your terminal to add Homebrew to your PATH:
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/lucas/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-- clone dotfiles 
-- softwareupdate --install --all --verbose
-- install stow 
-- stow 
+Update the OS:
+```sh
+make softwareupdate
+```
 
-brew bundle --file=/path/to/your/Brewfile
+Install homebrew, and all homebrew casks and formulas described in the `Brewfile`:
+```sh
+make brew_install
+```
+
+Remove everything that is pinned on the dock:
+```sh
+make dock_cleanup
+```
+
+# Install languages using ASDF 
+
+Golang
+```sh
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+asdf install golang latest
+```
+
+Ruby 
+```sh
+asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf install ruby latest
+```
+
+
 
 # Side refs
 
@@ -26,3 +43,7 @@ https://github.com/dreamsofautonomy/dotfiles
 https://github.com/zero-sh/zero.sh
 https://github.com/holman/dotfiles
 https://github.com/msanders/setup/blob/master/CHECKLIST.md
+
+## Custom prompt ref 
+- https://stackoverflow.com/questions/66128326/how-to-fix-custom-terminal-prompt-with-export-ps1-w-clear-that-becomes
+- https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29

@@ -1,3 +1,11 @@
+# USAGE: brew bundle install
+
+# -- Formulas
+brew "asdf"
+brew "coreutils"
+brew "curl"
+brew "stow"
+
 # -- Casks
 cask "discord"
 cask "notion"
@@ -9,7 +17,8 @@ cask "zed"
 cask "arc"
 cask "rectangle"
 cask "slack"
+cask "notion-calendar"
 
-# -- Language formulas (avoid sys)
-brew "python"
-brew "ruby"
+# -- Custom Taps
+tap "heroku/brew"
+brew "heroku"
