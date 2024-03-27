@@ -2,25 +2,23 @@
 
 My dotfiles + Brewfiles
 
-# Usage
+# Fresh macbook setup
 
-The makefile is supposed to be run after a fresh install of MacOS.
+### 1. Check if the formulas and casks in the `Brewfile` still make sense
 
-Update the OS:
+### 2. Check the commands under the `Makefile`
+
+
+### 3. Either run everything with 
+```sh
+make all
+```
+Or run each command as needed
 ```sh
 make softwareupdate
+make homebrew
+...
 ```
-
-Install homebrew, and all homebrew casks and formulas described in the `Brewfile`:
-```sh
-make brew_install
-```
-
-Remove everything that is pinned on the dock:
-```sh
-make dock_cleanup
-```
-
 # Install languages using ASDF 
 
 Golang
@@ -37,12 +35,12 @@ asdf install ruby latest
 
 
 
-# Side refs
+## Dotfile ref
 
-https://github.com/dreamsofautonomy/dotfiles
-https://github.com/zero-sh/zero.sh
-https://github.com/holman/dotfiles
-https://github.com/msanders/setup/blob/master/CHECKLIST.md
+- https://github.com/dreamsofautonomy/dotfiles
+- https://github.com/zero-sh/zero.sh
+- https://github.com/holman/dotfiles
+- https://github.com/msanders/setup/blob/master/CHECKLIST.md
 
 ## Custom prompt ref 
 - https://stackoverflow.com/questions/66128326/how-to-fix-custom-terminal-prompt-with-export-ps1-w-clear-that-becomes

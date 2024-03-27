@@ -1,4 +1,4 @@
-all: softwareupdate homebrew dotfiles speedupkeyboard
+all: softwareupdate homebrew dotfiles resetdock speedupkeyboard
 
 softwareupdate:
 	@echo "Running software updates..."
@@ -31,7 +31,7 @@ speedupkeyboard:
 	@echo "Increasing key repeat rate..."
 	defaults write -g KeyRepeat -int 2 
 	@echo "Setting a shorter delay until key repeat..."
-	defaults write -g InitialKeyRepeat -int 10
+	defaults write -g InitialKeyRepeat -int 12
 	@echo "Disabling press-and-hold for keys in favor of key repeat..."
 	defaults write -g ApplePressAndHoldEnabled -bool false
 
