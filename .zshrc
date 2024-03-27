@@ -31,3 +31,6 @@ export PROMPT='${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 #   autoload -Uz compinit
 #   compinit
 # fi
+
+
+

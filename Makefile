@@ -1,4 +1,4 @@
-all: softwareupdate homebrew dotfiles resetdock
+all: softwareupdate homebrew dotfiles speedupkeyboard
 
 softwareupdate:
 	@echo "Running software updates..."
@@ -17,8 +17,23 @@ dotfiles:
 	@echo "Linking dotfiles to $(HOME)..."
 	stow . --target=$(HOME) --verbose=2
 
+update:
+	brew update
+	brew upgrade
+	brew cleanup
+	brew doctor
+
 resetdock:
 	@echo "Removing all persistent apps from the Dock..."
 	defaults write com.apple.dock "persistent-apps" -array; killall Dock;
 
-.PHONY: all softwareupdate homebrew dotfiles resetdock
+speedupkeyboard:
+	@echo "Increasing key repeat rate..."
+	defaults write -g KeyRepeat -int 2 
+	@echo "Setting a shorter delay until key repeat..."
+	defaults write -g InitialKeyRepeat -int 10
+	@echo "Disabling press-and-hold for keys in favor of key repeat..."
+	defaults write -g ApplePressAndHoldEnabled -bool false
+
+
+.PHONY: all softwareupdate homebrew dotfiles resetdock speedupkeyboard
