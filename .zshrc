@@ -3,13 +3,12 @@
 
 # -- Aliases
 alias nw="cd ~/Developer/Nordweg"
+alias Dev="cd ~/Developer"
 alias l='ls -CF'
 alias ll='ls -l'
 alias lla='ls -la'
 alias la='ls -A'
-
-# -- Bun completions
-[ -s "/Users/lucas/.bun/_bun" ] && source "/Users/lucas/.bun/_bun"
+alias dush='du -sh * | sort -h'
 
 # -- Enable color support
 export CLICOLOR=1
@@ -24,6 +23,9 @@ COLOR_DIR=$'%F{005}'
 COLOR_GIT=$'%F{075}'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+
+# -- Direnv 
+eval "$(direnv hook zsh)"
 
 # -- Homebrew completions ( Disabled because is slows down startup )
 # if type brew &>/dev/null; then

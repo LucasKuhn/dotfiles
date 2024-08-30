@@ -1,0 +1,25 @@
+{
+    // --- LOOKS
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "editor.hideCursorInOverviewRuler": true,
+    // "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    // --- ERB 
+    "[erb]": {
+        "editor.defaultFormatter": "elia.erb-formatter",
+        "editor.rulers": [
+            120
+        ],
+        "editor.formatOnSave": true,
+    },
+    "emmet.includeLanguages": {
+        "erb": "html"
+    },
+    "erb-formatter.lineLength": 120,
+    // --- RUBY
+    "[ruby]": {
+        "editor.formatOnSave": true,
+    },
+    "workbench.activityBar.location": "top",
+    "editor.minimap.enabled": false,
+}

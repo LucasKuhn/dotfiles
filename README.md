@@ -33,7 +33,8 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby latest
 ```
 
-
+# Custom warp theme
+mkdir -p ~/.warp/themes/
 
 ## Dotfile ref
 
