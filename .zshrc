@@ -10,8 +10,11 @@ alias lla='ls -la'
 alias la='ls -A'
 alias dush='du -sh * | sort -h'
 
-# -- Enable color support
-export CLICOLOR=1
+# -- Mise 
+eval "$(mise activate zsh)"
+
+# -- Direnv 
+eval "$(direnv hook zsh)"
 
 # -- Custom prompt
 function parse_git_branch() {
@@ -24,8 +27,6 @@ COLOR_GIT=$'%F{075}'
 setopt PROMPT_SUBST
 export PROMPT='${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
 
-# -- Direnv 
-eval "$(direnv hook zsh)"
 
 # -- Homebrew completions ( Disabled because is slows down startup )
 # if type brew &>/dev/null; then
@@ -33,6 +34,4 @@ eval "$(direnv hook zsh)"
 #   autoload -Uz compinit
 #   compinit
 # fi
-
-
 

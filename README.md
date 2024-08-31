@@ -10,6 +10,7 @@ My dotfiles + Brewfiles
 
 
 ### 3. Either run everything with 
+
 ```sh
 make all
 ```
@@ -19,22 +20,14 @@ make softwareupdate
 make homebrew
 ...
 ```
-# Install languages using ASDF 
 
-Golang
+# Warp themes
 ```sh
-asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
-asdf install golang latest
-```
-
-Ruby 
-```sh
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby latest
-```
-
-# Custom warp theme
 mkdir -p ~/.warp/themes/
+cd ~/.warp/
+git clone https://github.com/warpdotdev/themes.git
+```
+Current favorite: `Vscode Default Dark Material`
 
 ## Dotfile ref
 
