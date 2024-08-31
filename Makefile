@@ -10,6 +10,7 @@ homebrew:
 		echo "Homebrew not found - Attempting to install..."; \
 		/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
 	fi
+	eval "$$(/opt/homebrew/bin/brew shellenv)"
 	@echo "Running brew bundle..."
 	brew bundle --file=./Brewfile
 
