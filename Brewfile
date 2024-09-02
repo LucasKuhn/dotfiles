@@ -2,15 +2,17 @@
 
 # -- Formulas
 brew "coreutils"
+brew "libyaml"
 brew "curl"
 brew "stow"
 brew "bat"
 brew "mise"
+brew "gh"
 
 # -- Casks
 cask "1password"
 cask "warp"
-cask "visual-studio-code"
+cask "cursor"
 cask "gitbutler"
 cask "logi-options+"
 cask "notion"

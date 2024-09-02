@@ -1,9 +1,11 @@
 {
     // --- LOOKS
     "workbench.colorTheme": "Catppuccin Frappé",
-    "editor.hideCursorInOverviewRuler": true,
+    // "window.commandCenter": false,
+    // "editor.hideCursorInOverviewRuler": true,
+    // "editor.minimap.enabled": false,
     // "workbench.layoutControl.enabled": false,
-    "window.commandCenter": false,
+
     // --- ERB 
     "[erb]": {
         "editor.defaultFormatter": "elia.erb-formatter",
@@ -16,10 +18,10 @@
         "erb": "html"
     },
     "erb-formatter.lineLength": 120,
+    
     // --- RUBY
     "[ruby]": {
         "editor.formatOnSave": true,
     },
     "workbench.activityBar.location": "top",
-    "editor.minimap.enabled": false,
 }
