@@ -5,7 +5,6 @@ brew "coreutils"
 brew "libyaml"
 brew "curl"
 brew "stow"
-brew "bat"
 brew "mise"
 brew "gh"
 
@@ -13,23 +12,29 @@ brew "gh"
 cask "1password"
 cask "warp"
 cask "cursor"
-cask "gitbutler"
 cask "logi-options+"
-cask "notion"
-cask "notion-calendar"
+# cask "gitbutler"
+# cask "notion"
+# cask "notion-calendar"
+cask "rectangle"
+cask "monitorcontrol"
 
 # -- Custom Taps
 tap "heroku/brew"
 brew "heroku"
 
 # -- VS Code Extensions
-vscode "cardinal90.multi-cursor-case-preserve"
 vscode "catppuccin.catppuccin-vsc"
-vscode "elia.erb-formatter"
 vscode "github.copilot"
-vscode "github.copilot-chat"
+vscode "cardinal90.multi-cursor-case-preserve"
+
+# -- Ruby VS Code Extensions
 vscode "kaiwood.endwise"
+vscode "elia.erb-formatter"
 vscode "kirillplatonov.erb-toggle"
 vscode "rayhanw.erb-helpers"
 vscode "shopify.ruby-lsp"
 vscode "testdouble.vscode-standard-ruby"
+
+# Mac Store Apps
+mas 'XCode', id: 497799835

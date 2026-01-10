@@ -11,13 +11,75 @@
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "!editorTextFocus"
     },
-    // Move to previous/next editor with CONTROl+CMD+LEFT and RIGHT
     {
-        "key": "ctrl+cmd+left",
-        "command": "workbench.action.previousEditor"
+        "key": "ctrl+cmd+right",
+        "command": "-quickInput.acceptInBackground",
+        "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
     },
     {
         "key": "ctrl+cmd+right",
-        "command": "workbench.action.nextEditor"
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "cmd+r s",
+        "command": "-workbench.action.files.saveWithoutFormatting"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+r shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+e",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+    // {
+    //     "key": "cmd+e",
+    //     "command": "composerMode.background"
+    // }
+    // --- ERB Toggle 
+    {
+        "key": "shift+cmd+,",
+        "command": "erb-toggle.toggleTags",
+        "when": "editorTextFocus"
+    },{
+        "command": "erb-toggle.toggleTags",
+        "key": "ctrl+shift+,",
     },
 ]

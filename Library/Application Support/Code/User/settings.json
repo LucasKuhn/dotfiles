@@ -1,27 +1,81 @@
 {
-    // --- LOOKS
-    "workbench.colorTheme": "Catppuccin Frappé",
-    // "window.commandCenter": false,
-    // "editor.hideCursorInOverviewRuler": true,
-    // "editor.minimap.enabled": false,
-    // "workbench.layoutControl.enabled": false,
-
-    // --- ERB 
-    "[erb]": {
-        "editor.defaultFormatter": "elia.erb-formatter",
-        "editor.rulers": [
-            120
-        ],
-        "editor.formatOnSave": true,
-    },
-    "emmet.includeLanguages": {
-        "erb": "html"
-    },
-    "erb-formatter.lineLength": 120,
-    
-    // --- RUBY
-    "[ruby]": {
-        "editor.formatOnSave": true,
-    },
-    "workbench.activityBar.location": "top",
+  // --- LOOKS
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.activityBar.location": "top",
+  // "window.commandCenter": false,
+  // "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": false,
+  // "workbench.layoutControl.enabled": false,
+  // --- ERB
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.rulers": [160],
+    "editor.formatOnSave": true
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "erb-formatter.commandPath": "/Users/lucas/.local/share/mise/installs/ruby/3.4.1/bin/erb-format",
+  "erb-formatter.lineLength": 200,
+  // --- RUBY
+  // "[ruby]": {
+  //     "editor.defaultFormatter": "misogi.ruby-rubocop",
+  //     "editor.formatOnSave": false,
+  // },
+  // "window.commandCenter": false,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "editor.formatOnSave": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:claude-3.5-sonnet",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.enablePreview": false,
+  "files.trimFinalNewlines": true,
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[tailwindcss]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-erb-beautify.keepBlankLines": 1,
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": false,
+    "launchpad": true
+  },
+  "gitlens.views.repositories.files.layout": "list",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "jsonc": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "files.autoSave": "afterDelay",
+  "peacock.affectDebuggingStatusBar": true,
+  "peacock.affectEditorGroupBorder": true,
+  "peacock.affectPanelBorder": true,
+  "peacock.affectSideBarBorder": true,
+  "peacock.affectStatusAndTitleBorders": true,
+  "peacock.affectTabActiveBorder": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "gitlens.rebaseEditor.ordering": "asc",
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
 }

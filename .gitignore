@@ -25,3 +25,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 Brewfile.lock.json
+
+# AI Files generated with Spec driven development
+# __tasks/
+__kiro/
+.kiro/
+.ai/
+
+# Biome
+biome.json

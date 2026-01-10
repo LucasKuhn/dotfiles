@@ -28,6 +28,16 @@ resetdock:
 	@echo "Removing all persistent apps from the Dock..."
 	defaults write com.apple.dock "persistent-apps" -array; killall Dock;
 
+app_switcher_on_all_displays:
+	@echo "Setting app switcher to show on all displays..."
+	defaults write com.apple.dock appswitcher-all-displays -bool true; killall Dock;
+
+setup_global_gitignore:
+	@echo "Configuring git to use global .gitignore..."
+	@if [ -z "$$(git config --get core.excludesfile)" ]; then \
+		git config --global core.excludesfile ~/.gitignore_global; \
+	fi
+
 speedupkeyboard:
 	@echo "Increasing key repeat rate..."
 	defaults write -g KeyRepeat -int 2 
