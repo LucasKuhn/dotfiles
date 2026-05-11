@@ -30,7 +30,6 @@ Brewfile.lock.json
 # __tasks/
 __kiro/
 .kiro/
-.ai/
 
 # Biome
 biome.json

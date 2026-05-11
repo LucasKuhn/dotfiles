@@ -4,6 +4,9 @@
 # -- Aliases
 alias dots='code ~/dotfiles'
 alias yc="claude --dangerously-skip-permissions"
+alias ya="amp --dangerously-allow-all"
+alias ampreview="amp --dangerously-allow-all review 'main...HEAD'"
+alias claudy="zed ~/.claude"
 
 # --- Folders
 alias dev="cd ~/Developer"
