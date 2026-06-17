@@ -1,9 +1,11 @@
-# .zshrc is loaded only for interactive shells. 
+# .zshrc is loaded only for interactive shells.
 # It should contain commands to set up aliases, custom prompt, functions, scripts, key bindings.
 
 # -- Aliases
-alias dots='code ~/dotfiles'
+alias dots='zed ~/dotfiles'
 alias yc="claude --dangerously-skip-permissions"
+alias yca="claude agents --dangerously-skip-permissions"
+
 
 # --- Folders
 alias dev="cd ~/Developer"
@@ -26,25 +28,23 @@ alias be='bundle exec'
 alias rof='bundle exec rspec --only-failures'
 export RAILS_EDITOR="zed"
 
-# Fix for OpenSSL issues in Ruby
-export RUBYOPT="-r$HOME/.rubyopenssl_default_store.rb $RUBYOPT" 
-
 # --- Git
-export GIT_EDITOR="vim"
+# export GIT_EDITOR="vim"
 alias gco='git checkout'
 alias gitmain='git checkout main && git pull'
+alias gitmaster='git checkout master && git pull'
 alias gitlog='git log --oneline --graph --decorate --all'
 alias gitoops='git reset HEAD~ --soft'
 alias gitbranchclean='git branch | grep -v butler | grep -v main | xargs git branch -D'
 alias gitundo='git reset --hard HEAD~1'
 alias please="git push --force-with-lease origin HEAD"
-# -- (in progress) -- 
+# -- (in progress) --
 # alias uncommit='git reset --soft main'
-# fixup 
-# rebase interactive 
-# reorder 
-# ammend  
-# git log --oneline 
+# fixup
+# rebase interactive
+# reorder
+# ammend
+# git log --oneline
 # git rebase --onto origin/main 9bfc0d42
 # git reset --soft main
 # git add . ; git commit --fixup f4f000159d48108fdf96ce2f130f431cbf08a6bd
@@ -57,22 +57,24 @@ alias gitignoreinfo="git config --get core.excludesfile"
 # git reflog
 # git checkout <commit> -- <filepath>
 
-# -- Claude code 
+# -- Claude code
 alias ccusage="bunx ccusage"
+alias ccup="HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade claude-code@latest"
 
-# -- Kompass specific 
+
+# -- Kompass specific
 alias specfast="bundle exec rspec --tag ~type:system --tag ~speed:slow"
 
 # -- Homebrew update and cleanup
 alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
 
-# -- Mise 
+# -- Mise
 eval "$(mise activate zsh)"
 
-# -- Direnv 
+# -- Direnv
 eval "$(direnv hook zsh)"
 
-# -- Atuin 
+# -- Atuin
 eval "$(atuin init zsh)"
 
 # -- Colored ls output
@@ -99,3 +101,6 @@ export PATH="/Users/lucas/.antigravity/antigravity/bin:$PATH"
 
 # Amp CLI
 export PATH="/Users/lucas/.amp/bin:$PATH"
+
+# PSQL
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"

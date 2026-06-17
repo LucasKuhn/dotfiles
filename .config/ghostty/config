@@ -1,0 +1,13 @@
+# typography
+font-size = 16
+# font-thicken=true
+# font-thicken-strength=1
+adjust-cell-height=1
+# font-family=Fira Code
+# font-family=Monaspace Neon NF
+# font-family = 0xProto
+# font-family = Geist Mono
+
+
+# theme=Tokyo Night
+theme = Catppuccin Mocha

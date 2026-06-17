@@ -1,4 +1,4 @@
-all: softwareupdate homebrew dotfiles resetdock speedupkeyboard
+all: softwareupdate homebrew dotfiles resetdock speedupkeyboard hushlogin
 
 softwareupdate:
 	@echo "Running software updates..."
@@ -40,11 +40,15 @@ setup_global_gitignore:
 
 speedupkeyboard:
 	@echo "Increasing key repeat rate..."
-	defaults write -g KeyRepeat -int 2 
+	defaults write -g KeyRepeat -int 2
 	@echo "Setting a shorter delay until key repeat..."
 	defaults write -g InitialKeyRepeat -int 12
 	@echo "Disabling press-and-hold for keys in favor of key repeat..."
 	defaults write -g ApplePressAndHoldEnabled -bool false
 
+hushlogin:
+	@echo "Suppressing last login message..."
+	touch $(HOME)/.hushlogin
 
-.PHONY: all softwareupdate homebrew dotfiles resetdock speedupkeyboard
+
+.PHONY: all softwareupdate homebrew dotfiles resetdock speedupkeyboard hushlogin
