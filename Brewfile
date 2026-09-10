@@ -13,3 +13,4 @@ brew "atuin"
 # -- Casks
 cask "rectangle"
 cask "monitorcontrol"
+cask "openlogi"
